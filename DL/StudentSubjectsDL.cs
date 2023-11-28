@@ -43,10 +43,11 @@ namespace DL
             var newStudentSubject = new StudentSubjectDbDto
             {
                 StudentId = (int)StudentId,
-                SubjectId = (int)SubjectId
+                SubjectId = (int)SubjectId,
             };
 
             _stContext.StudentSubjects.Add(newStudentSubject);
+            _stContext.SaveChanges();
             _stContext.Entry(newStudentSubject).Reload();
             return new StudentSubjectsResponseDto
             {

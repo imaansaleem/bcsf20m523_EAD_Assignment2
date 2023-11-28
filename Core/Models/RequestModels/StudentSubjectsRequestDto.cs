@@ -8,8 +8,8 @@ namespace Core.Models.RequestModels
 {
     public class StudentSubjectsRequestDto
     {
-        public int? StudentId;
-        public int? SubjectId;
-        public double? Marks;
+        public int? StudentId { get; set; }
+        public int? SubjectId { get; set; }
+        public double? Marks { get; set; }
     }
 }
